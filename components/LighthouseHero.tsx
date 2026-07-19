@@ -138,15 +138,15 @@ export default function LighthouseHero() {
             </div>
           </div>
 
-          {/* Scene 2: Cyprus Web Design */}
+          {/* Scene 2: Cyprus Based */}
           <div
             style={{ opacity: scene2Opacity, transition: 'opacity 0.1s linear' }}
             className="absolute inset-0 flex flex-col items-end justify-center px-8 md:px-24 lg:px-32 xl:px-48"
           >
             <div className="max-w-2xl text-right">
-              <h3 className="text-[#f5d08b] text-xs md:text-sm tracking-[0.2em] uppercase mb-4 flex items-center justify-end gap-4">
+              <h3 className="mb-4 ml-auto flex w-fit items-center justify-end gap-3 rounded-full border border-[#f5d08b]/40 bg-[#02060c]/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-[#ffe0a3] shadow-[0_8px_30px_rgba(0,0,0,0.45)] backdrop-blur-md md:text-sm">
                 <span className="w-12 h-[1px] bg-[#f5d08b]"></span>
-                Cyprus Web Design
+                Cyprus Based
               </h3>
               <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif text-[#f2f2f2] mb-6 leading-[1.1]">
                 Premium Quality, <br/> Local Focus
