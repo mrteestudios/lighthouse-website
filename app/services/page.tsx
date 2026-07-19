@@ -570,7 +570,7 @@ function FinalCTA() {
     >
       <div
         className="absolute inset-0 bg-cover bg-center opacity-40"
-        style={{ backgroundImage: "url('/images/services-final-lighthouse.jpg')" }}
+        style={{ backgroundImage: "url('/images/services-final-lighthouse.png')" }}
       />
       <div
         className="absolute inset-0"
