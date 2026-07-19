@@ -115,7 +115,7 @@ export default function LighthouseHero() {
           {/* Scene 1: Main Title */}
           <div
             style={{ opacity: scene1Opacity, transition: 'opacity 0.1s linear' }}
-            className="absolute inset-0 flex flex-col items-start justify-center px-8 md:px-24 lg:px-32 xl:px-48 pt-32 md:pt-48"
+            className="absolute inset-0 flex flex-col items-start justify-center px-8 pb-20 pt-24 md:px-24 md:pb-20 md:pt-32 lg:px-32 xl:px-48"
           >
             <div className="max-w-2xl text-left">
               <h3 className="text-[#f5d08b] text-xs md:text-sm tracking-[0.2em] uppercase mb-4 flex items-center gap-4">
@@ -186,13 +186,13 @@ export default function LighthouseHero() {
                 Ready to Shine?
               </h2>
               <p className="text-xl md:text-2xl text-[#f5d08b] font-light mb-12 max-w-2xl">
-                Let's build a digital presence that perfectly represents your local brand.
+                Let&apos;s build a digital presence that perfectly represents your local brand.
               </p>
               <Link 
                 href="#contact" 
                 className="inline-flex items-center gap-3 px-10 py-5 border border-[#f5d08b] bg-[#f5d08b]/10 text-[#f5d08b] text-sm font-semibold tracking-[0.2em] uppercase rounded-[2px] hover:bg-[#f5d08b] hover:text-black transition-all backdrop-blur-sm"
               >
-                Let's Build It 
+                Let&apos;s Build It 
                 <span>&rarr;</span>
               </Link>
             </div>
@@ -201,12 +201,14 @@ export default function LighthouseHero() {
           {/* Scroll Indicator */}
           <div
             style={{ opacity: scene1Opacity, transition: 'opacity 0.1s linear' }}
-            className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 pointer-events-none"
+            className="absolute bottom-5 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-2 rounded-full border border-white/20 bg-[#02060c]/75 px-5 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.4)] backdrop-blur-md pointer-events-none md:bottom-8"
           >
-            <span className="text-xs uppercase tracking-widest text-white/50">
-              Scroll
+            <span className="whitespace-nowrap text-[10px] font-semibold uppercase tracking-[0.28em] text-white md:text-xs">
+              Scroll down
             </span>
-            <div className="w-[1px] h-12 bg-gradient-to-b from-white/50 to-transparent animate-pulse" />
+            <span className="text-lg leading-none text-[#f5d08b] animate-bounce" aria-hidden="true">
+              ↓
+            </span>
           </div>
         </div>
       </main>
