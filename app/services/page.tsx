@@ -11,7 +11,9 @@ const NAVY = "#071827";
 const NAVY_LIGHT = "#0D2436";
 const GOLD = "#D8A54A";
 
-const fadeUp = {
+import { motion, type Variants } from "framer-motion";
+
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
