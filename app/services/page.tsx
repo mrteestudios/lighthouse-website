@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { motion, type Variants } from "framer-motion";
+import Header from '@/components/Header';
+import MainFooter from '@/components/MainFooter';
 
 /* ------------------------------------------------------------------ */
 /* Brand tokens                                                       */
@@ -674,13 +676,15 @@ function FinalCTA() {
 export default function ServicesPage() {
   return (
     <main>
+      <Header />
       <ServicesHero />
       <PricingSection />
       <SupportSection />
       <AISection />
       <ComparisonTable />
       <FAQSection />
-      <FinalCTA />
+<FinalCTA />
+      <MainFooter />
     </main>
   );
 }
