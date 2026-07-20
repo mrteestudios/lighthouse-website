@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+
 
 /* ------------------------------------------------------------------ */
 /* Brand tokens — matches your existing homepage. Adjust if your      */
