@@ -214,18 +214,13 @@ function ContactMain() {
             </p>
             <div className="space-y-3">
               <a
-                href="mailto:hello@lighthousewebdesign.xyz"
+                href="mailto:mrteestudios@gmail.com"
                 className="block text-white hover:text-[color:var(--gold)] transition-colors"
                 style={{ ["--gold" as string]: GOLD }}
               >
-                hello@lighthousewebdesign.xyz
+                mrteestudios@gmail.com
               </a>
-              <a
-                href="tel:+357"
-                className="block text-white hover:text-[color:var(--gold)] transition-colors"
-              >
-                +357 00 000 000
-              </a>
+
             </div>
           </div>
 

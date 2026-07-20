@@ -167,7 +167,7 @@ function ServicesHero() {
             View Packages <span>→</span>
           </a>
           <a
-            href="#contact"
+            href="/contact"
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md font-medium border text-white transition-all hover:translate-x-1"
             style={{ borderColor: "rgba(255,255,255,0.3)" }}
           >
@@ -345,7 +345,7 @@ function PricingSection() {
             </ul>
 
             <a
-              href="#contact"
+              href="/contact"
               className="flex items-center justify-center gap-2 px-6 py-3.5 rounded-md font-medium transition-all hover:translate-x-1"
               style={{ backgroundColor: GOLD, color: NAVY }}
             >
@@ -491,7 +491,7 @@ function AISection() {
               ))}
             </ul>
             <a
-              href="#contact"
+              href="/contact"
               className="flex items-center justify-center gap-2 px-6 py-3.5 rounded-md font-medium transition-all hover:translate-x-1"
               style={{ backgroundColor: GOLD, color: NAVY }}
             >
