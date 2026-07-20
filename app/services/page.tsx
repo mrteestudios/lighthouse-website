@@ -114,11 +114,12 @@ const icons = {
 
 /* ------------------------------------------------------------------ */
 /* Hero                                                                */
+/*                                                                     */
 /* ------------------------------------------------------------------ */
 function ServicesHero() {
   return (
     <section
-      className="relative min-h-[90vh] flex items-center px-6 md:px-16 overflow-hidden"
+      className="relative min-h-[90vh] flex items-center pt-28 px-6 md:px-16 overflow-hidden"
       style={{ backgroundColor: NAVY }}
     >
       <div
@@ -375,18 +376,18 @@ function SupportSection() {
         whileInView="show"
         viewport={{ once: true }}
         variants={fadeUp}
-        className="max-w-6xl mx-auto mb-16"
+        className="max-w-2xl mx-auto mb-16 text-center"
       >
-        <div className="flex items-center gap-3 mb-5">
+        <div className="flex items-center justify-center gap-3 mb-5">
           <span className="w-6 h-px" style={{ backgroundColor: GOLD }} />
           <span className="text-xs font-semibold tracking-[0.25em] uppercase" style={{ color: GOLD }}>
             Always Looked After
           </span>
         </div>
-        <h2 className="font-serif text-4xl md:text-5xl text-white mb-5 max-w-xl">
+        <h2 className="font-serif text-4xl md:text-5xl text-white mb-5">
           We Handle Everything
         </h2>
-        <p className="text-white/60 max-w-xl">
+        <p className="text-white/60">
           Your website remains secure, current and performing at its best
           while you focus on the business behind it.
         </p>
