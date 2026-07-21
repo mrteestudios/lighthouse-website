@@ -114,7 +114,7 @@ export default function LighthouseHero() {
 
           {/* Scene 1: Main Title */}
           <div
-            style={{ opacity: scene1Opacity, transition: 'opacity 0.1s linear' }}
+            style={{ opacity: scene1Opacity, transition: 'opacity 0.1s linear', pointerEvents: scene1Opacity > 0.5 ? 'auto' : 'none' }}
             className="absolute inset-0 flex flex-col items-start justify-center px-8 pb-20 pt-24 md:px-24 md:pb-20 md:pt-32 lg:px-32 xl:px-48"
           >
             <div className="max-w-2xl text-left">
@@ -140,7 +140,7 @@ export default function LighthouseHero() {
 
           {/* Scene 2: Cyprus Based */}
           <div
-            style={{ opacity: scene2Opacity, transition: 'opacity 0.1s linear' }}
+            style={{ opacity: scene2Opacity, transition: 'opacity 0.1s linear', pointerEvents: scene2Opacity > 0.5 ? 'auto' : 'none' }}
             className="absolute inset-0 flex flex-col items-end justify-center px-8 md:px-24 lg:px-32 xl:px-48"
           >
             <div className="max-w-2xl text-right">
@@ -159,7 +159,7 @@ export default function LighthouseHero() {
 
           {/* Scene 3: Empowering Local Businesses */}
           <div
-            style={{ opacity: scene3Opacity, transition: 'opacity 0.1s linear' }}
+            style={{ opacity: scene2Opacity, transition: 'opacity 0.1s linear', pointerEvents: scene2Opacity > 0.5 ? 'auto' : 'none' }}
             className="absolute inset-0 flex flex-col items-start justify-center px-8 md:px-24 lg:px-32 xl:px-48"
           >
             <div className="max-w-2xl text-left">
@@ -178,7 +178,7 @@ export default function LighthouseHero() {
 
           {/* Scene 4: Ready to Shine? */}
           <div
-            style={{ opacity: scene4Opacity, transition: 'opacity 0.1s linear' }}
+            style={{ opacity: scene3Opacity, transition: 'opacity 0.1s linear', pointerEvents: scene3Opacity > 0.5 ? 'auto' : 'none' }}
             className="absolute inset-0 flex flex-col items-center justify-center text-center px-8"
           >
             <div className="max-w-3xl flex flex-col items-center">
