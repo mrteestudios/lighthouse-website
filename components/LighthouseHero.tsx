@@ -126,10 +126,10 @@ export default function LighthouseHero() {
                 GUIDING YOU <br/> THROUGH THE FOG
               </h1>
               <p className="text-lg md:text-xl text-white/80 font-light mb-10 leading-relaxed max-w-xl">
-                In uncertain times, we light the way forward with insight, experience and unwavering support.
+                In uncertain times, we light the way forward with eye catching Wed sites, insight, experience and unwavering support from idea to ongoing support.
               </p>
               <Link 
-                href="#services" 
+                href="/services" 
                 className="inline-flex items-center gap-3 px-8 py-4 border border-[#f5d08b] text-[#f5d08b] text-xs font-semibold tracking-[0.2em] uppercase rounded-[2px] hover:bg-[#f5d08b] hover:text-black transition-colors"
               >
                 Discover Our Services 
