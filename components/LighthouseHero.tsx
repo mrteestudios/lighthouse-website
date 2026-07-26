@@ -161,13 +161,13 @@ const scene4Opacity = interpolate(
             <div className="max-w-2xl text-right">
               <h3 className="mb-4 ml-auto flex w-fit items-center justify-end gap-3 rounded-full border border-[#f5d08b]/40 bg-[#02060c]/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-[#ffe0a3] shadow-[0_8px_30px_rgba(0,0,0,0.45)] backdrop-blur-md md:text-sm">
                 <span className="w-12 h-[1px] bg-[#f5d08b]"></span>
-                Cyprus Based
+                BASED IN CYPRUS
               </h3>
               <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif text-[#f2f2f2] mb-6 leading-[1.1]">
                 Premium Quality, <br/> Local Focus
               </h2>
               <p className="text-lg md:text-xl text-white/80 font-light mb-10 leading-relaxed max-w-xl ml-auto">
-                We provide local businesses with top-tier web design and management packages that are highly affordable, without sacrificing quality or customer service.
+                We provide local businesses with Premium web design and management packages that are affordable, without sacrificing quality or customer service.
               </p>
             </div>
           </div>

@@ -216,8 +216,8 @@ const plans: Plan[] = [
     code: "LIGHTHOUSE / 01",
     name: "Starter",
     tagline: "Perfect for startups, sole traders and businesses getting online.",
-    setupFee: "€340",
-    monthly: "€75/month",
+    setupFee: "€440",
+    monthly: "€175/month",
     monthlyNote: "Hosting, Website Management & Content Editing",
     features: [
       "1 Page Landing Website", "Business Details", "Contact Form", "Mobile Responsive",
@@ -231,8 +231,8 @@ const plans: Plan[] = [
     name: "Small Business",
     badge: "★ MOST POPULAR",
     tagline: "Perfect for growing businesses.",
-    setupFee: "€540",
-    monthly: "€130/month",
+    setupFee: "€740",
+    monthly: "€330/month",
     monthlyNote: "Hosting, Website Management, Editing & Additions",
     features: [
       "Home Page", "About Us", "Services", "Contact Us", "Mobile Responsive",
@@ -244,11 +244,11 @@ const plans: Plan[] = [
   },
   {
     code: "LIGHTHOUSE / 03",
-    name: "Commercial",
+    name: "Blockbuster",
     badge: "★ PREMIUM",
     tagline: "Luxury website experience.",
     setupFee: "€970",
-    monthly: "€297/month",
+    monthly: "€497/month",
     monthlyNote: "Hosting, Website Management, Editing & Unlimited Additions",
     features: [
       "Premium 4 Page Website", "Scroll Animations", "Premium Hero Sections", "Luxury Design",
