@@ -50,7 +50,7 @@ const websites = [
 
 export default function PortfolioShowcase() {
   return (
-    <section className="min-h-screen bg-black text-white py-32 px-6">
+    <section className="min-h-screen bg-[#02060c] text-white py-32 px-6">
 
       <div className="max-w-6xl mx-auto text-center mb-24">
 

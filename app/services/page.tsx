@@ -247,7 +247,7 @@ const plans: Plan[] = [
     name: "Commercial",
     badge: "★ PREMIUM",
     tagline: "Luxury website experience.",
-    setupFee: "€770",
+    setupFee: "€970",
     monthly: "€297/month",
     monthlyNote: "Hosting, Website Management, Editing & Unlimited Additions",
     features: [
