@@ -75,10 +75,25 @@ export default function LighthouseHero() {
   }, [isLoaded, images, scrollProgress]);
 
   // Scene Opacity Maps (Timing) - Adjusted for longer 'stay'
-  const scene1Opacity = interpolate(scrollProgress, [0, 0.15, 0.28], [1, 1, 0]);
-  const scene2Opacity = interpolate(scrollProgress, [0.18, 0.28, 0.45, 0.55], [0, 1, 1, 0]);
-  const scene3Opacity = interpolate(scrollProgress, [0.45, 0.55, 0.72, 0.82], [0, 1, 1, 0]);
-  const scene4Opacity = interpolate(scrollProgress, [0.72, 0.82, 1], [0, 1, 1]);
+const scene1Opacity = interpolate(scrollProgress, [0, 0.15, 0.28], [1, 1, 0]);
+
+const scene2Opacity = interpolate(
+  scrollProgress,
+  [0.22, 0.32, 0.48, 0.58],
+  [0, 1, 1, 0]
+);
+
+const scene3Opacity = interpolate(
+  scrollProgress,
+  [0.52, 0.62, 0.78, 0.86],
+  [0, 1, 1, 0]
+);
+
+const scene4Opacity = interpolate(
+  scrollProgress,
+  [0.82, 0.9, 1],
+  [0, 1, 1]
+);
 
   return (
     <div className="relative bg-[#050e18] font-sans text-white">
@@ -178,7 +193,7 @@ export default function LighthouseHero() {
 
           {/* Scene 4: Ready to Shine? */}
           <div
-            style={{ opacity: scene3Opacity, transition: 'opacity 0.1s linear', pointerEvents: scene3Opacity > 0.5 ? 'auto' : 'none' }}
+            style={{ opacity: scene4Opacity, transition: 'opacity 0.1s linear', pointerEvents: scene3Opacity > 0.5 ? 'auto' : 'none' }}
             className="absolute inset-0 flex flex-col items-center justify-center text-center px-8"
           >
             <div className="max-w-3xl flex flex-col items-center">
