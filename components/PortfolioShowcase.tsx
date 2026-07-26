@@ -50,7 +50,13 @@ const websites = [
 
 export default function PortfolioShowcase() {
   return (
-    <section className="min-h-screen bg-[#02060c] text-white py-32 px-6">
+    <section
+  className="min-h-screen text-white py-32 px-6 bg-cover bg-center bg-fixed"
+  style={{
+    backgroundImage:
+      "linear-gradient(rgba(2,6,12,0.85), rgba(2,6,12,0.95)), url('/lighthouse-bg.jpg')",
+  }}
+>
 
       <div className="max-w-6xl mx-auto text-center mb-24">
 

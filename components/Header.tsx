@@ -39,7 +39,7 @@ export default function Header() {
   }, [hoveredIndex, activeIndex]);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-6 py-4 md:px-12 md:py-6 flex items-center justify-between pointer-events-auto">
+    <header className="relative top-0 left-0 right-0 z-50 px-6 py-4 md:px-12 md:py-6 flex items-center justify-between pointer-events-auto">
       {/* Logo Area */}
       <Link href="/" className="flex items-center gap-4 group">
         <div className="w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden border border-white/20 bg-black/50 flex items-center justify-center shrink-0 transition-transform group-hover:scale-105">
