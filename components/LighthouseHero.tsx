@@ -157,9 +157,9 @@ export default function LighthouseHero() {
             </div>
           </div>
 
-          {/* Scene 3: Empowering Local Businesses */}
-          <div
-            style={{ opacity: scene2Opacity, transition: 'opacity 0.1s linear', pointerEvents: scene2Opacity > 0.5 ? 'auto' : 'none' }}
+         {/* Scene 3: Empowering Local Businesses */}
+<div
+  style={{ opacity: scene3Opacity, transition: 'opacity 0.1s linear', pointerEvents: scene3Opacity > 0.5 ? 'auto' : 'none' }}
             className="absolute inset-0 flex flex-col items-start justify-center px-8 md:px-24 lg:px-32 xl:px-48"
           >
             <div className="max-w-2xl text-left">
