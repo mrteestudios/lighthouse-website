@@ -54,7 +54,7 @@ export default function PortfolioShowcase() {
   className="min-h-screen text-white py-32 px-6 bg-cover bg-center bg-fixed"
   style={{
     backgroundImage:
-      "linear-gradient(rgba(2,6,12,0.85), rgba(2,6,12,0.95)), url('/lighthouse-bg.jpg')",
+      "linear-gradient(rgba(2,6,12,0.85), rgba(2,6,12,0.95)), url('/lighthouse-bg.png')",
   }}
 >
 
