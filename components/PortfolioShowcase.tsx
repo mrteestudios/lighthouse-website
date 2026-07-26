@@ -1,49 +1,140 @@
-import Link from 'next/link';
+"use client";
 
-export default function MainFooter() {
+import { motion } from "framer-motion";
+
+const websites = [
+  {
+    title: "Aurelia Diamonds",
+    url: "https://aurelia-diamonds-vvs1.vercel.app/",
+    description:
+      "Luxury jewellery ecommerce experience with premium visuals, cinematic branding and an elegant customer journey.",
+  },
+  {
+    title: "North Cyprus University Portal",
+    url: "https://cyprus-uni-portal.vercel.app/",
+    description:
+      "A modern student-focused university platform designed to help users discover education opportunities.",
+  },
+  {
+    title: "Nox Botanica",
+    url: "https://nox-botanica.vercel.app/",
+    description:
+      "A luxury botanical brand experience combining immersive storytelling with premium design.",
+  },
+];
+
+export default function PortfolioShowcase() {
   return (
-    <footer className="bg-[#02060c] py-12 px-6 md:px-12 border-t border-white/5">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        {/* Logo and Brand */}
-        <div className="flex items-center gap-4">
-          <div className="w-12 h-12 rounded-full overflow-hidden border border-white/20 bg-black/50 flex items-center justify-center shrink-0">
-            <img 
-              src="/logo.png" 
-              alt="Lighthouse Logo" 
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="flex flex-col">
-            <span className="text-xl font-serif tracking-widest text-white leading-none">
-              LIGHTHOUSE
-            </span>
-            <div className="flex items-center gap-2 mt-1">
-              <span className="h-[1px] w-6 bg-[#f5d08b]"></span>
-              <span className="text-[10px] tracking-[0.3em] text-[#f5d08b] uppercase leading-none">
-                Web Design
-              </span>
-            </div>
-          </div>
-        </div>
+    <section className="min-h-screen bg-black text-white py-24 px-6">
 
-        {/* Links */}
-        <div className="flex flex-col items-center md:items-end gap-2">
-          <div className="flex items-center gap-6 text-xs text-white/60 tracking-widest uppercase">
-            <Link href="/privacy" className="hover:text-white transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="hover:text-white transition-colors">
-              Terms & Conditions
-            </Link>
-            <Link href="/contact" className="hover:text-[#f5d08b] transition-colors">
-              Contact Us
-            </Link>
-          </div>
-          <p className="text-white/40 text-[10px] tracking-wider mt-2">
-            &copy; {new Date().getFullYear()} Lighthouse Web Design. All rights reserved.
-          </p>
-        </div>
+      {/* HERO */}
+      <div className="max-w-6xl mx-auto text-center mb-24">
+
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-5xl md:text-7xl font-bold tracking-tight"
+        >
+          Portfolio
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+          className="mt-6 text-lg md:text-xl text-white/60"
+        >
+          Designed and developed by Lighthouse Web Design.
+        </motion.p>
+
       </div>
-    </footer>
+
+
+      {/* PROJECT SHOWCASE */}
+      <div className="max-w-7xl mx-auto">
+
+        {websites.map((site, index) => (
+
+          <motion.section
+            key={site.title}
+            initial={{ opacity: 0, y: 80 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mb-32"
+          >
+
+            <div className="mb-8">
+
+              <h2 className="text-3xl md:text-5xl font-semibold">
+                {site.title}
+              </h2>
+
+              <p className="mt-4 text-white/60 max-w-3xl">
+                {site.description}
+              </p>
+
+            </div>
+
+
+            {/* DEVICE FRAME */}
+            <div className="
+              rounded-3xl
+              overflow-hidden
+              border
+              border-white/10
+              bg-zinc-950
+              shadow-2xl
+            ">
+
+              <div className="
+                h-8
+                bg-white/5
+                flex
+                items-center
+                gap-2
+                px-5
+              ">
+                <span className="w-3 h-3 rounded-full bg-red-500/70"></span>
+                <span className="w-3 h-3 rounded-full bg-yellow-500/70"></span>
+                <span className="w-3 h-3 rounded-full bg-green-500/70"></span>
+              </div>
+
+
+              <iframe
+                src={site.url}
+                title={site.title}
+                loading="lazy"
+                className="
+                  w-full
+                  h-[700px]
+                  md:h-[850px]
+                  border-0
+                "
+              />
+
+            </div>
+
+
+            <div className="mt-6 text-sm text-white/40">
+              Live website experience • React • Vercel Deployment • Responsive Design
+            </div>
+
+
+          </motion.section>
+
+        ))}
+
+      </div>
+
+
+      {/* FOOTER */}
+      <footer className="text-center mt-20 text-white/40 text-sm">
+        Designed by Lighthouse Web Design
+      </footer>
+
+
+    </section>
   );
 }
