@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const websites = [
   {
@@ -8,129 +9,194 @@ const websites = [
     url: "https://aurelia-diamonds-vvs1.vercel.app/",
     description:
       "Luxury jewellery ecommerce experience with premium visuals, cinematic branding and an elegant customer journey.",
+    features: [
+      "Advanced CSS animations",
+      "Luxury UI/UX design",
+      "Responsive mobile-first layout",
+      "Smooth scrolling experiences",
+      "Premium ecommerce structure",
+      "Vercel deployment",
+    ],
   },
   {
     title: "North Cyprus University Portal",
     url: "https://cyprus-uni-portal.vercel.app/",
     description:
       "A modern student-focused university platform designed to help users discover education opportunities.",
+    features: [
+      "React application architecture",
+      "Interactive user experience",
+      "Modern component design",
+      "Responsive layouts",
+      "Student-focused UX strategy",
+      "Advanced web animations",
+    ],
   },
   {
     title: "Nox Botanica",
     url: "https://nox-botanica.vercel.app/",
     description:
       "A luxury botanical brand experience combining immersive storytelling with premium design.",
+    features: [
+      "Cinematic scrolling effects",
+      "Custom CSS styling",
+      "Premium brand presentation",
+      "Interactive visual sections",
+      "Responsive design",
+      "Modern web technologies",
+    ],
   },
 ];
 
 export default function PortfolioShowcase() {
   return (
-    <section className="min-h-screen bg-black text-white py-24 px-6">
+    <section className="min-h-screen bg-black text-white py-32 px-6">
 
-      {/* HERO */}
       <div className="max-w-6xl mx-auto text-center mb-24">
 
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-5xl md:text-7xl font-bold tracking-tight"
+          className="text-5xl md:text-7xl font-bold"
         >
-          Portfolio
+          Our Portfolio
         </motion.h1>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-          className="mt-6 text-lg md:text-xl text-white/60"
-        >
-          Designed and developed by Lighthouse Web Design.
-        </motion.p>
+        <p className="mt-6 text-white/60 text-lg">
+          Award-style digital experiences designed by Lighthouse Web Design.
+        </p>
 
       </div>
 
 
-      {/* PROJECT SHOWCASE */}
-      <div className="max-w-7xl mx-auto">
+      {websites.map((site) => (
 
-        {websites.map((site, index) => (
+        <motion.section
+          key={site.title}
+          initial={{ opacity: 0, y: 80 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="max-w-7xl mx-auto mb-40"
+        >
 
-          <motion.section
-            key={site.title}
-            initial={{ opacity: 0, y: 80 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="mb-32"
-          >
+          <div className="grid md:grid-cols-2 gap-10 items-start mb-12">
 
-            <div className="mb-8">
+            <div>
 
-              <h2 className="text-3xl md:text-5xl font-semibold">
+              <h2 className="text-4xl md:text-5xl font-semibold">
                 {site.title}
               </h2>
 
-              <p className="mt-4 text-white/60 max-w-3xl">
+              <p className="mt-5 text-white/60 leading-relaxed">
                 {site.description}
               </p>
 
-            </div>
+
+              <div className="mt-8">
+
+                <h3 className="text-sm tracking-[0.3em] uppercase text-[#f5d08b] mb-5">
+                  Features
+                </h3>
 
 
-            {/* DEVICE FRAME */}
-            <div className="
-              rounded-3xl
-              overflow-hidden
-              border
-              border-white/10
-              bg-zinc-950
-              shadow-2xl
-            ">
+                <ul className="space-y-3">
 
-              <div className="
-                h-8
-                bg-white/5
-                flex
-                items-center
-                gap-2
-                px-5
-              ">
-                <span className="w-3 h-3 rounded-full bg-red-500/70"></span>
-                <span className="w-3 h-3 rounded-full bg-yellow-500/70"></span>
-                <span className="w-3 h-3 rounded-full bg-green-500/70"></span>
+                  {site.features.map((feature) => (
+                    <li
+                      key={feature}
+                      className="flex items-center gap-3 text-white/70"
+                    >
+                      <span className="text-[#f5d08b]">
+                        ✓
+                      </span>
+
+                      {feature}
+
+                    </li>
+                  ))}
+
+                </ul>
+
               </div>
 
 
-              <iframe
-                src={site.url}
-                title={site.title}
-                loading="lazy"
+              <Link
+                href={site.url}
+                target="_blank"
                 className="
-                  w-full
-                  h-[700px]
-                  md:h-[850px]
-                  border-0
+                inline-flex
+                mt-10
+                px-10
+                py-4
+                rounded-full
+                border
+                border-[#f5d08b]
+                text-[#f5d08b]
+                font-semibold
+                tracking-widest
+                text-sm
+                hover:bg-[#f5d08b]
+                hover:text-black
+                transition-all
+                duration-300
                 "
-              />
+              >
+                VIEW LIVE PROJECT
+              </Link>
+
 
             </div>
 
 
-            <div className="mt-6 text-sm text-white/40">
-              Live website experience • React • Vercel Deployment • Responsive Design
+          </div>
+
+
+          <div className="
+            rounded-3xl
+            overflow-hidden
+            border
+            border-white/10
+            bg-zinc-950
+            shadow-2xl
+          ">
+
+            <div className="
+              h-10
+              bg-white/5
+              flex
+              items-center
+              gap-2
+              px-5
+            ">
+              <span className="w-3 h-3 rounded-full bg-red-500/70"></span>
+              <span className="w-3 h-3 rounded-full bg-yellow-500/70"></span>
+              <span className="w-3 h-3 rounded-full bg-green-500/70"></span>
             </div>
 
 
-          </motion.section>
+            <iframe
+              src={site.url}
+              title={site.title}
+              loading="lazy"
+              className="
+              w-full
+              h-[750px]
+              md:h-[900px]
+              border-0
+              "
+            />
 
-        ))}
-
-      </div>
+          </div>
 
 
-      {/* FOOTER */}
-      <footer className="text-center mt-20 text-white/40 text-sm">
+        </motion.section>
+
+      ))}
+
+
+      <footer className="text-center text-white/40 mt-20">
         Designed by Lighthouse Web Design
       </footer>
 
