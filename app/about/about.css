@@ -92,21 +92,6 @@
       linear-gradient(180deg,var(--navy-950),var(--navy-900) 60%);
     overflow:hidden;
   }
-  .beam-wrap{
-    position:absolute;top:-160px;right:-120px;width:640px;height:640px;
-    pointer-events:none;z-index:0;
-  }
-  .beam{
-    position:absolute;inset:0;
-    background:conic-gradient(from 0deg,
-      transparent 0deg, rgba(243,212,138,.18) 8deg, transparent 40deg,
-      transparent 180deg, rgba(243,212,138,.12) 188deg, transparent 220deg,
-      transparent 360deg);
-    border-radius:50%;
-    animation:sweep 9s linear infinite;
-    mask:radial-gradient(circle at 50% 50%, black 0%, black 35%, transparent 72%);
-  }
-  @keyframes sweep{to{transform:rotate(360deg);}}
   .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .8fr;gap:60px;align-items:center;}
   .hero h1{font-size:clamp(36px,4.6vw,58px);letter-spacing:-.01em;}
   .hero h1 em{font-style:normal;color:var(--gold-300);}

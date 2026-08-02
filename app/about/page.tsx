@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import "./about.css";
+import Header from "@/components/Header";
+import MainFooter from "@/components/MainFooter";
 
 export default function AboutPage() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -35,52 +37,10 @@ export default function AboutPage() {
 
   return (
     <>
-      <header>
-        <div className="nav wrap">
-          <a href="/" className="logo">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20 3L25 14H15L20 3Z" fill="#E8B65C" />
-              <path d="M16.5 14H23.5L26 34H14L16.5 14Z" stroke="#F6F1E4" strokeWidth="1.6" fill="none" />
-              <path d="M17.5 20H22.5" stroke="#E8B65C" strokeWidth="1.4" />
-              <path d="M11 36H29" stroke="#F6F1E4" strokeWidth="1.6" strokeLinecap="round" />
-            </svg>
-            <span className="logo-text">
-              <b>LIGHTHOUSE</b>
-              <span>Web Design</span>
-            </span>
-          </a>
-
-          <nav className={`links${menuOpen ? " open" : ""}`}>
-            <a href="/" onClick={closeMenu}>Home</a>
-            <a href="/services" onClick={closeMenu}>Services</a>
-            <a href="/portfolio" onClick={closeMenu}>Portfolio</a>
-            <a href="/about" className="active" onClick={closeMenu}>About</a>
-            <a href="/blog" onClick={closeMenu}>Blog</a>
-            <a href="/contact" onClick={closeMenu}>Contact</a>
-          </nav>
-
-          <div className="nav-right">
-            <a href="/contact" className="btn btn-primary">Let&apos;s Talk</a>
-            <button
-              className="burger"
-              aria-label="Open menu"
-              aria-expanded={menuOpen}
-              onClick={() => setMenuOpen((v) => !v)}
-            >
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-          </div>
-        </div>
-      </header>
-
+    <Header />
       <main>
         {/* HERO */}
         <section className="hero">
-          <div className="beam-wrap" aria-hidden="true">
-            <div className="beam"></div>
-          </div>
           <div className="wrap hero-grid">
             <div>
               <p className="eyebrow">Our Story</p>
@@ -267,29 +227,7 @@ export default function AboutPage() {
         </section>
       </main>
 
-      <footer>
-        <div className="wrap">
-          <div className="foot-top">
-            <a href="/" className="logo">
-              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 3L25 14H15L20 3Z" fill="#E8B65C" />
-                <path d="M16.5 14H23.5L26 34H14L16.5 14Z" stroke="#F6F1E4" strokeWidth="1.6" fill="none" />
-                <path d="M11 36H29" stroke="#F6F1E4" strokeWidth="1.6" strokeLinecap="round" />
-              </svg>
-              <span className="logo-text">
-                <b>LIGHTHOUSE</b>
-                <span>Web Design</span>
-              </span>
-            </a>
-            <div className="foot-links">
-              <a href="/privacy">Privacy Policy</a>
-              <a href="/terms">Terms &amp; Conditions</a>
-              <a href="/contact">Contact Us</a>
-            </div>
-          </div>
-          <div className="foot-bottom">© 2026 Lighthouse Web Design. All rights reserved.</div>
-        </div>
-      </footer>
+      <MainFooter />
     </>
   );
 }
