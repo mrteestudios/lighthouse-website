@@ -207,26 +207,6 @@ function ContactMain() {
           className="md:col-span-2 space-y-8"
         >
           <div>
-            <Eyebrow>Direct Contact</Eyebrow>
-            <p className="text-white/60 text-sm mb-4">
-              Prefer to reach out directly? We&apos;re happy to chat over
-              email or phone.
-            </p>
-            <div className="space-y-3">
-              <a
-                href="mailto:mrteestudios@gmail.com"
-                className="block text-white hover:text-[color:var(--gold)] transition-colors"
-                style={{ ["--gold" as string]: GOLD }}
-              >
-                mrteestudios@gmail.com
-              </a>
-
-            </div>
-          </div>
-
-          <div className="h-px bg-white/10" />
-
-          <div>
             <Eyebrow>Response Time</Eyebrow>
             <p className="text-white/60 text-sm">
               We reply to every enquiry within one business day — often much

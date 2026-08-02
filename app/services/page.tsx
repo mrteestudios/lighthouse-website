@@ -119,7 +119,7 @@ const icons = {
 function ServicesHero() {
   return (
     <section
-      className="relative min-h-[90vh] flex items-center pt-28 px-6 md:px-16 overflow-hidden"
+     className="relative min-h-[90vh] flex items-center pt-28 overflow-hidden"
       style={{ backgroundColor: NAVY }}
     >
       <div
@@ -138,7 +138,7 @@ function ServicesHero() {
         initial="hidden"
         animate="show"
         variants={fadeUp}
-        className="relative z-10 max-w-2xl py-32"
+        className="relative z-10 py-32 w-full"
       >
         <div className="flex items-center gap-3 mb-6">
           <span className="w-8 h-px" style={{ backgroundColor: GOLD }} />
@@ -268,7 +268,7 @@ function PricingSection() {
         whileInView="show"
         viewport={{ once: true, amount: 0.3 }}
         variants={fadeUp}
-        className="text-center max-w-2xl mx-auto mb-16"
+        className="relative z-10 max-w-2xl py-32 mx-auto w-full px-6 md:px-12 lg:px-16"
       >
         <Eyebrow>Find Your Foundation</Eyebrow>
         <h2 className="font-serif text-4xl md:text-5xl text-white mb-5">
