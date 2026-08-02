@@ -37,18 +37,11 @@ export default function AboutPage() {
     <>
       <header>
         <div className="nav wrap">
-          <a href="/" className="logo">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20 3L25 14H15L20 3Z" fill="#E8B65C" />
-              <path d="M16.5 14H23.5L26 34H14L16.5 14Z" stroke="#F6F1E4" strokeWidth="1.6" fill="none" />
-              <path d="M17.5 20H22.5" stroke="#E8B65C" strokeWidth="1.4" />
-              <path d="M11 36H29" stroke="#F6F1E4" strokeWidth="1.6" strokeLinecap="round" />
-            </svg>
-            <span className="logo-text">
-              <b>LIGHTHOUSE</b>
-              <span>Web Design</span>
-            </span>
-          </a>
+          <img
+          src="/images/logo.png"
+          alt="Lighthouse Web Design"
+          style={{ height: "56px", width: "auto" }}
+          />
 
           <nav className={`links${menuOpen ? " open" : ""}`}>
             <a href="/" onClick={closeMenu}>Home</a>
@@ -78,9 +71,6 @@ export default function AboutPage() {
       <main>
         {/* HERO */}
         <section className="hero">
-          <div className="beam-wrap" aria-hidden="true">
-            <div className="beam"></div>
-          </div>
           <div className="wrap hero-grid">
             <div>
               <p className="eyebrow">Our Story</p>
@@ -270,17 +260,11 @@ export default function AboutPage() {
       <footer>
         <div className="wrap">
           <div className="foot-top">
-            <a href="/" className="logo">
-              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 3L25 14H15L20 3Z" fill="#E8B65C" />
-                <path d="M16.5 14H23.5L26 34H14L16.5 14Z" stroke="#F6F1E4" strokeWidth="1.6" fill="none" />
-                <path d="M11 36H29" stroke="#F6F1E4" strokeWidth="1.6" strokeLinecap="round" />
-              </svg>
-              <span className="logo-text">
-                <b>LIGHTHOUSE</b>
-                <span>Web Design</span>
-              </span>
-            </a>
+            <img
+            src="/images/logo.png"
+            alt="Lighthouse Web Design"
+            style={{ height: "56px", width: "auto" }}
+            />
             <div className="foot-links">
               <a href="/privacy">Privacy Policy</a>
               <a href="/terms">Terms &amp; Conditions</a>
