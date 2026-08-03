@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { motion, type Variants } from "framer-motion";
-import Header from '@/components/Header';
-import MainFooter from '@/components/MainFooter';
+import Header from "@/components/Header";
+import MainFooter from "@/components/MainFooter";
 
 /* ------------------------------------------------------------------ */
 /* Brand tokens                                                       */
@@ -17,7 +17,7 @@ const fadeUp: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
-function Eyebrow({ children }: { children: React.ReactNode }) {
+function Eyebrow({ children }: { children: ReactNode }) {
   return (
     <div className="flex items-center justify-center gap-3 mb-5">
       <span className="w-6 h-px" style={{ backgroundColor: GOLD }} />
@@ -54,7 +54,7 @@ function Check() {
 }
 
 /* Simple bordered line-icon box, used in the "We Handle Everything" and AI sections */
-function IconBox({ children }: { children: React.ReactNode }) {
+function IconBox({ children }: { children: ReactNode }) {
   return (
     <div
       className="w-14 h-14 flex items-center justify-center rounded-md border mb-6"
@@ -114,18 +114,20 @@ const icons = {
 
 /* ------------------------------------------------------------------ */
 /* Hero                                                                */
-/*                                                                     */
 /* ------------------------------------------------------------------ */
 function ServicesHero() {
   return (
     <section
-     className="relative min-h-[90vh] flex items-center pt-28 overflow-hidden"
+      className="relative min-h-[90vh] flex items-center pt-28 overflow-hidden"
       style={{ backgroundColor: NAVY }}
     >
       <div
         className="absolute inset-0 bg-cover bg-center opacity-70"
-        style={{ backgroundImage: "url('/images/services-hero-lighthouse.png')" }}
+        style={{
+          backgroundImage: "url('/images/services-hero-lighthouse.png')",
+        }}
       />
+
       <div
         className="absolute inset-0"
         style={{
@@ -138,54 +140,73 @@ function ServicesHero() {
         initial="hidden"
         animate="show"
         variants={fadeUp}
-        className="relative z-10 py-32 w-full"
+        className="relative z-10 w-full py-32"
       >
-        <div className="flex items-center gap-3 mb-6">
-          <span className="w-8 h-px" style={{ backgroundColor: GOLD }} />
-          <span
-            className="text-xs font-semibold tracking-[0.25em] uppercase"
-            style={{ color: GOLD }}
-          >
-            Premium Web Design Services
-          </span>
-        </div>
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="max-w-2xl text-left">
+            <div className="flex items-center gap-3 mb-6">
+              <span
+                className="w-8 h-px"
+                style={{ backgroundColor: GOLD }}
+              />
+              <span
+                className="text-xs font-semibold tracking-[0.25em] uppercase"
+                style={{ color: GOLD }}
+              >
+                Premium Web Design Services
+              </span>
+            </div>
 
-        <h1 className="font-serif text-4xl md:text-6xl text-white leading-tight mb-6">
-          Website Packages Designed To Grow With Your Business
-        </h1>
-        <p className="text-white/70 text-lg mb-10 max-w-xl">
-          Whether you&apos;re launching a new business or elevating an
-          established brand, we create premium websites that generate trust,
-          attract customers and grow with your business.
-        </p>
-        <div className="flex flex-wrap items-center gap-4">
-          <a
-            href="#packages"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md font-medium transition-all hover:translate-x-1"
-            style={{ backgroundColor: GOLD, color: NAVY }}
-          >
-            View Packages <span>→</span>
-          </a>
-          <a
-            href="/contact"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md font-medium border text-white transition-all hover:translate-x-1"
-            style={{ borderColor: "rgba(255,255,255,0.3)" }}
-          >
-            Let&apos;s Talk <span>→</span>
-          </a>
+            <h1 className="font-serif text-4xl md:text-6xl text-white leading-tight mb-6">
+              Website Packages Designed To Grow With Your Business
+            </h1>
+
+            <p className="text-white/70 text-lg leading-8 mb-10">
+              Whether you are launching a new business or elevating an
+              established brand, we create premium websites that generate
+              trust, attract customers and grow with your business.
+            </p>
+
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="#packages"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md font-medium transition-all hover:translate-x-1"
+                style={{ backgroundColor: GOLD, color: NAVY }}
+              >
+                View Packages →
+              </a>
+
+              <a
+                href="/contact"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md border text-white transition-all hover:translate-x-1"
+                style={{
+                  borderColor: "rgba(255,255,255,0.3)",
+                }}
+              >
+                Let&apos;s Talk →
+              </a>
+            </div>
+          </div>
         </div>
       </motion.div>
 
-      {/* Explore packages indicator — separate from the CTAs above */}
+      {/* Explore packages indicator */}
       <a
         href="#packages"
         aria-label="Explore packages"
         className="absolute bottom-10 right-10 md:right-16 hidden sm:flex items-center gap-3 text-white/50 hover:text-white/90 transition-colors z-10"
       >
-        <span className="text-xs tracking-[0.2em] uppercase">Explore Packages</span>
+        <span className="text-xs tracking-[0.2em] uppercase">
+          Explore Packages
+        </span>
+
         <motion.span
           animate={{ y: [0, 6, 0] }}
-          transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+          transition={{
+            duration: 1.8,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
           className="block w-px h-8"
           style={{ backgroundColor: "currentColor" }}
         />
@@ -262,44 +283,38 @@ const plans: Plan[] = [
 
 function PricingSection() {
   return (
-    <section id="packages" className="px-6 py-28" style={{ backgroundColor: NAVY }}>
+    <section id="packages" className="relative px-6 py-28" style={{ backgroundColor: NAVY }}>
       <motion.div
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true }}
         variants={fadeUp}
-        className="relative z-10 max-w-2xl py-32 mx-auto w-full px-6 md:px-12 lg:px-16"
+        className="max-w-2xl mx-auto mb-16 text-center"
       >
-        <Eyebrow>Find Your Foundation</Eyebrow>
+        <Eyebrow>Pricing Packages</Eyebrow>
         <h2 className="font-serif text-4xl md:text-5xl text-white mb-5">
-          Choose Your Lighthouse Package
+          Choose Your Website Package
         </h2>
         <p className="text-white/60">
-          Every package includes secure hosting, website management and
-          ongoing support.
+          Transparent pricing with no hidden fees. Every package includes
+          hosting, management and ongoing support.
         </p>
       </motion.div>
 
       <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
         {plans.map((plan) => (
           <motion.div
-            key={plan.name}
+            key={plan.code}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeUp}
             whileHover={{ y: -6 }}
-            className={`relative rounded-xl p-8 border backdrop-blur-sm transition-shadow ${
-              plan.featured ? "md:scale-105 md:py-10" : ""
-            }`}
+            className="relative rounded-xl p-8 border backdrop-blur-sm"
             style={{
-              backgroundColor: "rgba(255,255,255,0.03)",
-              borderColor: plan.featured || plan.glow ? GOLD : "rgba(255,255,255,0.1)",
-              boxShadow: plan.glow
-                ? `0 0 40px -8px ${GOLD}55`
-                : plan.featured
-                ? `0 0 30px -10px ${GOLD}44`
-                : undefined,
+              backgroundColor: plan.featured ? "rgba(216,165,74,0.06)" : "rgba(255,255,255,0.02)",
+              borderColor: plan.featured || plan.glow ? `${GOLD}80` : "rgba(255,255,255,0.1)",
+              boxShadow: plan.glow ? `0 0 60px -20px ${GOLD}80` : undefined,
             }}
           >
             {plan.badge && (
@@ -684,7 +699,7 @@ export default function ServicesPage() {
       <AISection />
       <ComparisonTable />
       <FAQSection />
-<FinalCTA />
+      <FinalCTA />
       <MainFooter />
     </main>
   );
