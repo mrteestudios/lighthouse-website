@@ -1,5 +1,6 @@
 "use client";
 
+import "./about.css";
 import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import MainFooter from "@/components/MainFooter";
