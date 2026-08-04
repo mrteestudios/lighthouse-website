@@ -12,16 +12,18 @@
     "framer-motion": "^12.42.2",
     "next": "16.2.10",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "eslint": "^9"
   },
   "devDependencies": {
+    "tailwindcss": "^4.2.2",
+    "postcss": "^8.4.24",
+    "autoprefixer": "^10.4.14",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^9",
     "eslint-config-next": "16.2.10",
-    "tailwindcss": "^4",
     "typescript": "^5"
   }
 }

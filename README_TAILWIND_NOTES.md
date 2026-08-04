@@ -1,0 +1,1 @@
+Updated package.json to include Tailwind, PostCSS and Autoprefixer devDependencies and keep existing scripts.
